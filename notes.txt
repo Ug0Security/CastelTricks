@@ -3,6 +3,8 @@
 admin:admin
 castel:castel
 
+shodan : http.favicon.hash:1850157807
+
 #### Castel ?? #####
 
 #Arbitrary File Read (As Root)
