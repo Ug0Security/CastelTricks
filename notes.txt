@@ -1,3 +1,5 @@
+found this on shodan safari.. and it actually was useful in a pentest 6 month later, lol.
+
 #Default password
 
 admin:admin
